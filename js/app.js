@@ -8,7 +8,9 @@ $(function(){
 	var email = document.getElementById('email'),
 		emailWrapper = document.getElementById('email-wrapper'),
 		submitForm = document.getElementById('submit-form'),
-		formAction = document.getElementById('get-started-form').action;
+		formAction = document.getElementById('get-started-form').action,
+		siteHeaderNav = $('#site-header-nav'),
+		siteHeaderMobiles = $('#site-header-mobiles');
 
 	// email.onblur = function() {
 	// 	if(validateEmail(this.value)) {
@@ -17,6 +19,18 @@ $(function(){
 	// 		this.classList = '';
 	// 	}
 	// }
+
+	siteHeaderMobiles.width(siteHeaderMobiles.width());
+
+	siteHeaderMobiles.on('click', function() {
+		if(siteHeaderNav.hasClass('open')) {
+			siteHeaderNav.removeClass('open');
+			siteHeaderMobiles.removeClass('open').text('Menu');
+		} else {
+			siteHeaderNav.addClass('open');
+			siteHeaderMobiles.addClass('open').text('Hide');
+		}
+	});
 
 	submitForm.onclick = function(e) {
 		var self = this;
