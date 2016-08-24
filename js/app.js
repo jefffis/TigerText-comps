@@ -20,7 +20,10 @@ $(function(){
 	// 	}
 	// }
 
-	siteHeaderMobiles.width(siteHeaderMobiles.width());
+	if($(window).outerWidth() <= 600) {
+		siteHeaderMobiles.width(siteHeaderMobiles.width());
+		console.log('foo');
+	}
 
 	siteHeaderMobiles.on('click', function() {
 		if(siteHeaderNav.hasClass('open')) {
