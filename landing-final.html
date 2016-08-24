@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<title dir="ltr">Tigertext: an encrypted messaging platform, built just for the healthcare industry.</title>
+
+		<link rel="stylesheet" href="styles/app.css" />
+	</head>
+	<body>
+		
+		<header class="site-header cf">
+			<a href="index.html">
+				<img src="images/tigertext-logo.png" class="site-header-img--centered" alt="Tigertext: an encrypted messaging platform, built just for the healthcare industry." />
+			</a>
+		</header>
+
+		<section role="main">
+			
+			<div class="home-cta-content form cf">
+				<div>
+					<h1>
+						Awesome&ndash;here&rsquo;s the last step!
+					</h1>
+					<!-- <p>
+						Please check your email to the registration process. Once you verify your email, we can finish the setup.
+					</p> -->
+					<p>
+						Please enter your name and then choose a password to finish.
+					</p>
+					<form action="submit.html" method="GET">
+						<fieldset>
+							<label>
+								<span>Full Name</span>
+								<input type="text" autofocus="on" />
+							</label>
+							<hr />
+							<label>
+								<span>Password</span>
+								<input type="password" />
+								<small>Must be at least 6 characters</small>
+							</label>
+							<hr class="sep" />
+							<button id="finalize">Get me TigerText</button>
+							<small>By signing up, you agree to TigerText&rsquo;s <a href="####">Terms of Service</a>.</small>
+						</fieldset>
+					</form>
+				</div>
+			</div>
+
+		</section>
+
+		<script>
+			var submitForm = document.getElementById('finalize');
+
+			submitForm.onclick = function(e) {
+				var self = this;
+
+				e.preventDefault();
+
+				this.disabled = true;				
+
+				setTimeout(function() {
+					self.classList = 'fade-in';
+				}, 125);
+			}
+
+			// function validateEmail(email) {
+			// 	var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			// 	return re.test(email);
+			// }
+		</script>
+
+	</body>
+</html>
