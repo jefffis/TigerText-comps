@@ -46,7 +46,7 @@ $(function(){
 		this.disabled = true;			
 
 		setTimeout(function() {
-			self.classList = 'fade-in';
+			self.className = 'fade-in';
 		}, 125);
 
 		setTimeout(function() {
